@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,47 @@
         document.write(nombre);
         document.write('<br>');
         document.write(edad);
+
+        /*
+        Para introducir datos por parte del usuario, se puede
+        utilizar el parámetro 'prompt'
+        su sintaxis es la siguiente
+        let variableEjemplo = window.prompt(mensaje,valorPorDefecto);
+        */
+       nombre = window.prompt('INGRESA TU PRIMER NOMBRE: ', '');
+       edad = window.prompt('INGRESA TU EDAD: ', '');
+       document.write('<br>');
+       document.write('Mucho gusto ', nombre);
+       document.write('<br>');
+       document.write('Me sorprende que tengas ', edad, ' años de edad.');
+
+       /*
+       Para solicitar confirmaciones al usuario, se puede usar
+       el parámetro 'confirm', su sintaxis es la sgte.:
+       let confirmacion = window.confirm(mensaje);
+       */
+      let relacion = 'NOVIA';
+      let mensaje = 'SOY LAURA, QUIERES SER MI ' + relacion;
+       let confirmacion = window.confirm(mensaje);
+      console.log(confirmacion);
+      if(confirmacion){
+        document.write('<br>');
+        document.write(nombre, ' es un gusto que podamos ser ', relacion.toLowerCase(), 's');
+      }else{
+        document.write('<br>');
+        document.write(nombre, ', es una lastima que no se haya concretado lo nuestro </3');
+      }
+
+      /*
+      TIPOS DE DATOS EN JS
+        - Number
+        - String
+        - Boolean
+        - Valores especiales: null y undefined
+        - Symbol
+        - BigInt (para valores que superen el tamaño de Number)
+        - Object (ejemplo Mujer.Object())
+      */
     </script>
 </body>
 </html>
